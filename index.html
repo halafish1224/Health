@@ -87,7 +87,7 @@
             border-bottom: 2px solid #EEE;
             font-weight: bold;
         }
-
+        
         /* 專屬分隔線 */
         .kidney-section { border-left: 6px solid var(--color-accent-kidney); }
         .heart-section { border-left: 6px solid var(--color-accent-heart); }
@@ -131,6 +131,50 @@
             border: 2px solid var(--color-secondary);
         }
 
+        /* 新增：詳細資訊區塊樣式 (用於承載表格與重點清單) */
+        .detail-block {
+            padding: 20px;
+            border-radius: 8px;
+            margin-top: 25px;
+        }
+        
+        .kidney-diet-block {
+            background-color: #e3f2fd; /* 淺藍色背景 */
+            border: 2px dashed var(--color-accent-kidney);
+        }
+
+        .table-title {
+            font-size: 1.3em;
+            font-weight: bold;
+            color: var(--color-text);
+            margin-top: 15px;
+            margin-bottom: 10px;
+            padding-left: 10px;
+            border-left: 5px solid var(--color-accent-kidney);
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            font-size: 0.95em;
+        }
+        th, td {
+            padding: 8px 12px;
+            text-align: left;
+            border: 1px solid #DDD;
+        }
+        th {
+            background-color: var(--color-accent-kidney);
+            color: white;
+            font-weight: bold;
+        }
+        .warning-text {
+            color: #CC0000;
+            font-weight: bold;
+            font-size: 1.1em;
+        }
+
+
         /* 腳註 */
         footer {
             text-align: center;
@@ -160,50 +204,113 @@
             
             <div class="card kidney-section">
                 <h3>💧 糖尿病與腎臟飲食調整</h3>
-                <span class="focus-point">嚴控血糖：腎臟保護的首要任務</span>
+                <span class="focus-point">目標：低鈉、優質蛋白質、足夠熱量</span>
                 <ul class="detail-list">
                     <li><span class="highlight-text">穩定血糖</span>：維持血糖在醫師建議範圍，是延緩腎絲球損傷的根本。</li>
-                    <li><span class="highlight-text">低鈉飲食</span>：減少鹽分攝取，有助於控制血壓，直接減輕腎臟過濾負擔。</li>
-                    <li><span class="highlight-text">適量蛋白質</span>：依照營養師建議，不過量攝取蛋白質，減輕代謝壓力。</li>
+                    <li><span class="highlight-text">低鈉飲食</span>：減少鹽分攝取，控制血壓，直接減輕腎臟過濾負擔。</li>
+                    <li><span class="highlight-text">蛋白質品質</span>：嚴格限制總量，但需確保攝取**高生物價 (HBV)** 蛋白質，對抗肌少症。</li>
                 </ul>
             </div>
 
             <div class="card kidney-section">
                 <h3>💊 用藥安全與追蹤細節</h3>
-                <span class="focus-point">主動告知 eGFR：避免腎臟毒性藥物</span>
+                <span class="focus-point">用藥：主動告知 eGFR，避免腎臟毒性藥物</span>
                 <ul class="detail-list">
                     <li><span class="highlight-text">禁用 NSAIDs</span>：所有非類固醇消炎止痛藥 (如布洛芬等) 應完全避開。</li>
                     <li><span class="highlight-text">藥物審核</span>：任何中藥、偏方、高劑量維他命，請務必諮詢腎臟科醫師。</li>
-                    <li><span class="highlight-text">定期檢查</span>：嚴格遵醫囑回診，追蹤 eGFR、肌酸酐、ACR 及電解質。</li>
+                    <li><span class="highlight-text">血壓藥物</span>：醫師通常會使用 **ACEI 或 ARB 類**藥物，以提供額外的腎臟保護作用。</li>
                 </ul>
             </div>
         </div>
         
+        <div class="detail-block kidney-diet-block">
+            <h3 style="font-size: 1.8em; color: var(--color-accent-kidney); margin-top: 0; text-align: center;">🥗 GFR 穩定：飲食四大基石詳細指南</h3>
+            
+            <div style="margin-bottom: 25px;">
+                <p class="table-title">🧂 1. 嚴格限制鈉 (Sodium)</p>
+                <p style="font-size: var(--font-large);">鈉導致水分滯留與高血壓。**每日鈉攝取應嚴格控制。**</p>
+                <p class="warning-text">❌ 嚴格禁止的「高鈉陷阱」：醃製食品 (榨菜、泡菜)、加工製品 (香腸、貢丸)、以及**低鈉鹽** (含高鉀，禁用)。</p>
+            </div>
+
+            <div style="margin-bottom: 25px;">
+                <p class="table-title">🦴 2. 嚴控磷 (Phosphorus) 堆積</p>
+                <p style="font-size: var(--font-large);">磷堆積會導致**骨病變**和**皮膚搔癢**。</p>
+                <table style="margin-top: 10px;">
+                    <thead>
+                        <tr style="background-color: #00bcd4; color: white;">
+                            <th style="padding: 10px; border: 1px solid #ccc;">類別</th>
+                            <th style="padding: 10px; border: 1px solid #ccc;">具體範例 (應避免或大幅減少)</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td style="padding: 10px; border: 1px solid #ccc; font-weight: bold;">乳製品/內臟</td>
+                            <td style="padding: 10px; border: 1px solid #ccc;">鮮奶、優格、起司、豬肝、魚卵、蝦米</td>
+                        </tr>
+                        <tr>
+                            <td style="padding: 10px; border: 1px solid #ccc; font-weight: bold;">全穀/乾豆</td>
+                            <td style="padding: 10px; border: 1px solid #ccc;">糙米、燕麥、麥片、紅豆、綠豆、堅果 (花生、腰果)</td>
+                        </tr>
+                        <tr>
+                            <td style="padding: 10px; border: 1px solid #ccc; font-weight: bold;">加工飲品</td>
+                            <td style="padding: 10px; border: 1px solid #ccc;">可樂、汽水、三合一咖啡、雞精、肉汁</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            
+            <div style="margin-bottom: 5px;">
+                <p class="table-title">💖 3. 嚴控鉀 (Potassium) 威脅心律</p>
+                <p style="font-size: var(--font-large);">鉀堆積會導致**高血鉀症**，威脅心律穩定，嚴重可能心跳停止。</p>
+                <table style="margin-top: 10px;">
+                    <thead>
+                        <tr style="background-color: #ff80ab; color: white;">
+                            <th style="padding: 10px; border: 1px solid #ccc;">類別</th>
+                            <th style="padding: 10px; border: 1px solid #ccc;">具體範例 (需特別小心)</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td style="padding: 10px; border: 1px solid #ccc; font-weight: bold;">水果</td>
+                            <td style="padding: 10px; border: 1px solid #ccc;">香蕉、釋迦、奇異果、榴槤、哈密瓜、乾燥水果乾</td>
+                        </tr>
+                        <tr>
+                            <td style="padding: 10px; border: 1px solid #ccc; font-weight: bold;">蔬菜/湯汁</td>
+                            <td style="padding: 10px; border: 1px solid #ccc;">地瓜葉、菠菜、空心菜、菇類；**肉湯、菜湯、雞精、濃茶**</td>
+                        </tr>
+                    </tbody>
+                </table>
+                <p style="font-size: 1.1em; font-weight: bold; color: var(--color-secondary); margin-top: 15px;">
+                    ✅ 降低鉀含量技巧：蔬菜切小塊後，用**大量清水煮沸 3~5 分鐘 (川燙)**，將菜湯瀝乾後再行烹調。
+                </p>
+            </div>
+        </div>
+
         <h2 class="section-title">二、 👨🏻 67歲男性：心血管支架的長期維護</h2>
         
         <div class="card-grid">
 
             <div class="card heart-section">
                 <h3>🧡 支架穩定：規律用藥是關鍵</h3>
-                <span class="focus-point">抗血小板藥物：防堵血栓的保命藥</span>
+                <span class="focus-point">DAPT：雙重抗血小板治療是防堵血栓的保命藥</span>
                 <ul class="detail-list">
-                    <li><span class="highlight-text">不可擅停</span>：**務必**遵照心臟科醫師指示服用抗血小板藥物（如阿斯匹靈）。停藥可能導致支架內血栓，危及生命。</li>
-                    <li><span class="highlight-text">三高控制</span>：持續控制血壓、血糖、血脂（特別是低密度膽固醇 LDL），是確保支架長期通暢的核心。</li>
-                    <li><span class="highlight-text">血壓監測</span>：每日定時測量並記錄血壓。</li>
+                    <li><span class="highlight-text warning-text">💊 絕對不可擅停藥！</span>：**務必**遵照心臟科醫師指示服用抗血小板藥物（如阿斯匹靈、P2Y12 抑制劑）。停藥可能導致支架內血栓，危及生命。</li>
+                    <li><span class="highlight-text">📉 降血脂藥物</span>：史塔汀類藥物能**穩定血管斑塊**，降低發炎，預防其他血管再阻塞。</li>
+                    <li><span class="highlight-text">三高控制</span>：持續控制血壓、血糖、血脂 (特別是 LDL)。</li>
                 </ul>
             </div>
 
             <div class="card heart-section">
                 <h3>💪 復健運動與生活調整</h3>
-                <span class="focus-point">溫和運動：強化心肺，避免負荷</span>
+                <span class="focus-point">五大基石：長期心血管健康策略</span>
                 <ul class="detail-list">
-                    <li><span class="highlight-text">循序漸進</span>：以心臟科醫師建議的運動方式為主，從輕量快走開始，逐漸增加強度。</li>
-                    <li><span class="highlight-text">避免劇烈</span>：避免突然爆發力或過度負重的運動，如舉重或衝刺。</li>
-                    <li><span class="highlight-text">注意警訊</span>：運動中若出現胸悶、呼吸急促、心悸，應立即停止並尋求醫療協助。</li>
+                    <li><span class="highlight-text warning-text">❌ 戒菸是首要任務</span>：吸菸是導致支架再阻塞和血栓的頭號敵人。</li>
+                    <li><span class="highlight-text">🥗 心臟健康飲食</span>：遵循地中海或 DASH 飲食，多蔬菜、全穀物、**橄欖油**、富含 Omega-3 的魚類 (如鮭魚)。</li>
+                    <li><span class="highlight-text">運動指南</span>：參加**心臟復健**計畫是黃金標準。從輕量快走開始，避免突然爆發力運動。</li>
                 </ul>
             </div>
         </div>
-
+        
         <h2 class="section-title">三、 👫 共同的健康維護法則：走出戶外，樂活人生</h2>
         
         <div class="card-grid">
@@ -212,7 +319,7 @@
                 <h3>🌳 規律運動與維持體重</h3>
                 <span class="focus-point">中等強度：每週累積 150 分鐘</span>
                 <ul class="detail-list">
-                    <li>**選擇活動**：鼓勵兩人一起進行如**快走**、**太極拳**、**散步**等溫和運動。</li>
+                    <li>**活動選擇**：鼓勵兩人一起進行如**快走**、**太極拳**、**散步**等溫和運動。</li>
                     <li>**避免勞累**：以身體舒適為原則，不要在極端氣候下運動。</li>
                     <li>**戒菸**：吸菸會嚴重傷害心血管和腎臟，必須立即且完全戒除。</li>
                 </ul>
@@ -223,312 +330,12 @@
                 <span class="focus-point">穩定心緒：保護血壓與免疫力</span>
                 <ul class="detail-list">
                     <li>**充足睡眠**：確保每晚 7-8 小時優質睡眠，規律作息。</li>
-                    <li>**水分補充**：定時喝水，避免脫水 (除非有醫師限水醫囑)。</li>
+                    <li>**水分補充**：定時喝水，避免脫水 (**腎臟患者需遵從醫師限水醫囑**)。</li>
                     <li>**保持樂觀**：適當的戶外活動和社交，有助於減輕壓力、穩定情緒。</li>
                 </ul>
             </div>
         </div>
     </div>
-
-<div style="max-width: 800px; margin: 0 auto; background-color: #f0f8ff; border: 8px solid #005f9c; padding: 40px; font-family: 'Microsoft JhengHei', sans-serif; color: #1e3a52; line-height: 1.6;">
-
-    <div style="background-color: #ffcccc; border: 3px solid #cc0000; padding: 20px; margin-bottom: 30px; text-align: center;">
-        <p style="font-size: 30px; font-weight: bold; color: #cc0000; margin: 0;">
-            ⚠️ 重 要 醫 療 警 告 ⚠️
-        </p>
-        <p style="font-size: 24px; margin: 10px 0 0 0;">
-            本資訊僅供教育參考，**絕不能取代專業腎臟科醫師與營養師的診斷和建議**。所有治療與飲食調整，請務必諮詢您的主治醫師。
-        </p>
-    </div>
-
-    <h1 style="font-family: 'Impact', sans-serif; font-size: 68px; color: #005f9c; text-align: center; line-height: 1.1; margin-bottom: 30px; text-shadow: 4px 4px 0px #c0d9e8;">
-        如何穩定腎絲球過濾率 (GFR)
-    </h1>
-
-    <h2 style="font-size: 36px; color: #007bff; border-bottom: 5px double #007bff; padding-bottom: 10px; margin-top: 40px;">
-        一、🎯 兩大元兇的精準管理 (保護腎臟微血管)
-    </h2>
-
-    <p style="font-size: 28px; font-weight: bold; color: #cc0000;">
-        腎功能下降 80% 來自於這兩大疾病的失控！
-    </p>
-
-    <ul style="font-size: 24px; margin-left: 0; padding-left: 20px;">
-        <li style="margin-bottom: 15px;">
-            <span style="font-size: 30px; font-weight: bold; color: #e67e22;">🩸 控制高血壓 (血壓目標達標)：</span>
-            <br>
-            <span style="display: block; margin-top: 5px;">高血壓直接損害腎絲球。醫師常使用 **ACEI 或 ARB 類藥物**，因為它們能額外降低腎絲球內部壓力，提供保護。</span>
-        </li>
-        <li style="margin-bottom: 15px;">
-            <span style="font-size: 30px; font-weight: bold; color: #3498db;">📉 穩定糖尿病 (血糖目標達標)：</span>
-            <br>
-            <span style="display: block; margin-top: 5px;">高血糖會導致微血管硬化結痂。嚴格控制糖化血色素 (HbA1c) 是最根本的保護方式。</span>
-        </li>
-    </ul>
-
-    <h2 style="font-size: 36px; color: #007bff; border-bottom: 5px double #007bff; padding-bottom: 10px; margin-top: 40px;">
-        二、🥗 飲食四大基石 (減輕腎臟過濾負擔)
-    </h2>
-
-    <div style="background-color: #e8f5e9; padding: 25px; margin-bottom: 25px; border-radius: 10px; border: 2px solid #388e3c;">
-
-        <h3 style="font-size: 32px; color: #388e3c; margin-top: 0;">
-            1. 限制鈉 (Sodium) 🧂
-        </h3>
-        <p style="font-size: 24px;">
-            鈉導致水分滯留，直接增加血壓，對腎臟造成壓力。**每日鈉攝取應嚴格控制。**
-        </p>
-        <p style="font-size: 24px; font-weight: bold; color: #cc0000;">
-            ❌ 嚴格禁止的「高鈉陷阱」：
-        </p>
-        <ul style="font-size: 22px; margin-left: 0; padding-left: 20px;">
-            <li><span style="font-weight: bold;">醃製食品：</span>榨菜、酸菜、泡菜、梅乾菜。</li>
-            <li><span style="font-weight: bold;">加工製品：</span>香腸、火腿、貢丸、魚丸、罐頭食品。</li>
-            <li><span style="font-weight: bold;">調味料：</span>低鈉鹽、薄鹽醬油 (含高鉀，腎臟病患禁用)。</li>
-        </ul>
-    </div>
-    
-    <div style="background-color: #fffde7; padding: 25px; margin-bottom: 25px; border-radius: 10px; border: 2px solid #fbc02d;">
-        <h3 style="font-size: 32px; color: #fbc02d; margin-top: 0;">
-            2. 蛋白質與熱量平衡 🥩
-        </h3>
-        <p style="font-size: 24px; font-weight: bold;">
-            目標：<span style="color: #005f9c;">限制總量</span>，但確保<span style="color: #005f9c;">優質！</span>
-        </p>
-        <ul style="font-size: 24px; margin-left: 0; padding-left: 20px;">
-            <li>
-                **✅ 優質蛋白質 (HBV)：** 選擇生物價高的來源，能高效利用並減少尿素廢物。
-                <p style="font-size: 22px; font-style: italic; margin-top: 5px;">
-                    **範例：** 雞蛋蛋白、魚肉、瘦肉、牛奶 (需監測磷)。
-                </p>
-            </li>
-            <li>
-                **✅ 熱量保障：** 為了對抗**肌少症**，必須確保足夠的非蛋白質熱量，避免身體分解肌肉。
-                <p style="font-size: 22px; font-style: italic; margin-top: 5px;">
-                    **主要來源：** 米飯、麵條等**碳水化合物**；適量**健康油脂**。
-                </p>
-            </li>
-        </ul>
-    </div>
-
-    <div style="background-color: #e3f2fd; padding: 25px; margin-bottom: 25px; border-radius: 10px; border: 2px solid #29b6f6;">
-        <h3 style="font-size: 32px; color: #29b6f6; margin-top: 0;">
-            3. 嚴控磷 (Phosphorus) 🦴
-        </h3>
-        <p style="font-size: 24px;">
-            磷堆積會導致**骨病變**和**皮膚搔癢**。
-        </p>
-        <p style="font-size: 24px; font-weight: bold; color: #cc0000;">
-            ❌ 嚴格限制的「高磷食物」：
-        </p>
-        <div style="overflow-x: auto;">
-            <table style="width: 100%; border-collapse: collapse; font-size: 22px; text-align: left;">
-                <thead>
-                    <tr style="background-color: #00bcd4; color: white;">
-                        <th style="padding: 10px; border: 1px solid #ccc;">類別</th>
-                        <th style="padding: 10px; border: 1px solid #ccc;">具體範例 (吸收率高，少食)</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td style="padding: 10px; border: 1px solid #ccc; font-weight: bold;">乳製品</td>
-                        <td style="padding: 10px; border: 1px solid #ccc;">鮮奶、優格、起司、奶精</td>
-                    </tr>
-                    <tr>
-                        <td style="padding: 10px; border: 1px solid #ccc; font-weight: bold;">內臟/魚類</td>
-                        <td style="padding: 10px; border: 1px solid #ccc;">豬肝、豬心、蝦米、吻仔魚、魚卵</td>
-                    </tr>
-                    <tr>
-                        <td style="padding: 10px; border: 1px solid #ccc; font-weight: bold;">全穀/乾豆</td>
-                        <td style="padding: 10px; border: 1px solid #ccc;">糙米、燕麥、麥片、紅豆、綠豆、堅果 (花生、腰果)</td>
-                    </tr>
-                    <tr>
-                        <td style="padding: 10px; border: 1px solid #ccc; font-weight: bold;">加工飲品</td>
-                        <td style="padding: 10px; border: 1px solid #ccc;">可樂、汽水、可可、三合一咖啡、雞精、肉汁</td>
-                    </tr>
-                </tbody>
-            </table>
-        </div>
-    </div>
-
-    <div style="background-color: #fce4ec; padding: 25px; margin-bottom: 25px; border-radius: 10px; border: 2px solid #e91e63;">
-        <h3 style="font-size: 32px; color: #e91e63; margin-top: 0;">
-            4. 嚴控鉀 (Potassium) 💖
-        </h3>
-        <p style="font-size: 24px;">
-            鉀堆積會導致**高血鉀症**，威脅**心律穩定**，嚴重可能心跳停止。
-        </p>
-        <p style="font-size: 24px; font-weight: bold; color: #cc0000;">
-            ❌ 應避免或大幅減少的「高鉀食物」：
-        </p>
-        <div style="overflow-x: auto;">
-            <table style="width: 100%; border-collapse: collapse; font-size: 22px; text-align: left;">
-                <thead>
-                    <tr style="background-color: #ff80ab; color: white;">
-                        <th style="padding: 10px; border: 1px solid #ccc;">類別</th>
-                        <th style="padding: 10px; border: 1px solid #ccc;">具體範例 (需特別小心)</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td style="padding: 10px; border: 1px solid #ccc; font-weight: bold;">水果</td>
-                        <td style="padding: 10px; border: 1px solid #ccc;">香蕉、釋迦、奇異果、榴槤、哈密瓜、乾燥水果乾</td>
-                    </tr>
-                    <tr>
-                        <td style="padding: 10px; border: 1px solid #ccc; font-weight: bold;">蔬菜</td>
-                        <td style="padding: 10px; border: 1px solid #ccc;">地瓜葉、菠菜、空心菜、竹筍、菇類（乾香菇、金針菇）</td>
-                    </tr>
-                    <tr>
-                        <td style="padding: 10px; border: 1px solid #ccc; font-weight: bold;">湯汁/飲品</td>
-                        <td style="padding: 10px; border: 1px solid #ccc;">肉湯、菜湯、雞精、人蔘精、濃茶、咖啡、運動飲料</td>
-                    </tr>
-                </tbody>
-            </table>
-        </div>
-        <p style="font-size: 24px; font-weight: bold; color: #388e3c; margin-top: 15px;">
-            ✅ 降低鉀含量小技巧：
-        </p>
-        <p style="font-size: 22px; font-style: italic;">
-            蔬菜切小塊後，用**大量清水煮沸 3~5 分鐘 (川燙)**，將菜湯瀝乾後再行烹調，可有效減少鉀離子。
-        </p>
-    </div>
-
-    <h2 style="font-size: 36px; color: #007bff; border-bottom: 5px double #007bff; padding-bottom: 10px; margin-top: 40px;">
-        三、💪 運動與生活方式 (協同治療)
-    </h2>
-    
-    <p style="font-size: 24px;">
-        規律的**中低強度運動**是重要的輔助治療，其效益直接回饋到 GFR 管理：
-    </p>
-    
-    <ul style="font-size: 24px; margin-left: 0; padding-left: 20px;">
-        <li style="margin-bottom: 10px;">
-            **降血壓：** 運動增強心血管彈性，降低血壓，減少腎絲球壓力。
-        </li>
-        <li style="margin-bottom: 10px;">
-            **控血糖：** 提高細胞對胰島素的敏感度，幫助血糖穩定。
-        </li>
-        <li style="margin-bottom: 10px;">
-            **對抗肌少症：** 搭配優質蛋白質，維持肌肉量，提高生活品質。
-        </li>
-    </ul>
-
-    <div style="background-color: #005f9c; color: white; padding: 20px; margin-top: 40px; text-align: center;">
-        <p style="font-size: 30px; font-weight: bold; margin: 0;">
-            記得：穩定 GFR 是一場馬拉松，需要耐心、紀律，以及專業團隊的指導。
-        </p>
-    </div>
-
-    <div style="max-width: 850px; margin: 0 auto; background-color: #f7f7f7; border: 8px solid #cc3333; padding: 40px; font-family: 'Microsoft JhengHei', sans-serif; color: #333; line-height: 1.6;">
-
-    <div style="background-color: #ffe0b3; border: 3px solid #ff9900; padding: 20px; margin-bottom: 30px; text-align: center;">
-        <p style="font-size: 30px; font-weight: bold; color: #cc3333; margin: 0;">
-            ⚠️ 重 要 醫 療 警 告 ⚠️
-        </p>
-        <p style="font-size: 24px; margin: 10px 0 0 0;">
-            本資訊為輔助性教育材料，所有藥物調整或運動計畫，請**務必遵循您的心臟科醫師**指示。
-        </p>
-    </div>
-
-    <h1 style="font-family: 'Impact', sans-serif; font-size: 72px; color: #cc3333; text-align: center; line-height: 1.1; margin-bottom: 30px; text-shadow: 4px 4px 0px #f0a0a0;">
-        支架植入後：<br>
-        <span style="color: #004d99;">預防與長期照護指南</span>
-    </h1>
-
-    <h2 style="font-size: 36px; color: #004d99; border-bottom: 5px double #004d99; padding-bottom: 10px; margin-top: 40px;">
-        一、核心目標：預防兩大風險
-    </h2>
-
-    <ul style="font-size: 28px; margin-left: 0; padding-left: 20px;">
-        <li style="margin-bottom: 15px;">
-            <span style="font-weight: bold; color: #cc3333;">1. 支架內血栓 (Stent Thrombosis)：</span>
-            <span style="display: block; margin-top: 5px;">最危險！血小板聚集導致支架急性阻塞，可能引發立即性心肌梗塞。</span>
-        </li>
-        <li style="margin-bottom: 15px;">
-            <span style="font-weight: bold; color: #ff9900;">2. 再狹窄 (Restenosis)：</span>
-            <span style="display: block; margin-top: 5px;">支架內壁細胞過度增生導致管腔再次變窄（現代藥物支架風險已大幅降低）。</span>
-        </li>
-    </ul>
-
-    <h2 style="font-size: 36px; color: #004d99; border-bottom: 5px double #004d99; padding-bottom: 10px; margin-top: 40px;">
-        二、💊 藥物防線：不可妥協的紀律
-    </h2>
-
-    <div style="background-color: #fff0f0; border: 3px solid #cc3333; padding: 25px; margin-bottom: 30px; border-radius: 10px;">
-        <h3 style="font-size: 34px; color: #cc3333; margin-top: 0;">
-            🥇 雙重抗血小板治療 (DAPT)
-        </h3>
-        <p style="font-size: 30px; font-weight: bold;">
-            絕對關鍵：<span style="background-color: #cc3333; color: white; padding: 5px 10px;">請嚴格按醫囑服用！</span>
-        </p>
-        <ul style="font-size: 26px; margin-left: 0; padding-left: 20px;">
-            <li>**阿斯匹靈 (Aspirin)：** 終身服用居多。</li>
-            <li>**P2Y12 抑制劑：** (如保栓通/Clopidogrel、百無凝/Ticagrelor 等)。服用時程依支架類型和個人風險而定 (通常 6 個月至 1 年以上)。**未經醫師同意，不可擅自停藥**，否則血栓風險極高。</li>
-        </ul>
-    </div>
-
-    <div style="background-color: #e0f0ff; border: 3px solid #004d99; padding: 25px; margin-bottom: 30px; border-radius: 10px;">
-        <h3 style="font-size: 34px; color: #004d99; margin-top: 0;">
-            📉 降血脂/膽固醇藥物 (Statins)
-        </h3>
-        <p style="font-size: 26px;">
-            史塔汀類藥物不僅降膽固醇，更重要的是它能**穩定動脈粥狀硬化斑塊**，降低血管壁發炎反應，預防其他血管再次阻塞。
-        </p>
-    </div>
-
-    <h2 style="font-size: 36px; color: #004d99; border-bottom: 5px double #004d99; padding-bottom: 10px; margin-top: 40px;">
-        三、🏃 生活方式五大基石
-    </h2>
-
-    <ul style="font-size: 26px; margin-left: 0; padding-left: 20px;">
-        <li style="margin-bottom: 15px;">
-            <span style="font-weight: bold; color: #cc3333;">❌ 1. 戒菸：</span>
-            <span style="display: block; margin-top: 5px;">**這是最重要、最有效的單一預防措施。**吸菸會讓血小板更容易凝集，並損傷血管內皮。</span>
-        </li>
-        <li style="margin-bottom: 15px;">
-            <span style="font-weight: bold; color: #008000;">🥗 2. 心臟健康飲食 (DASH / 地中海)：</span>
-            <span style="display: block; margin-top: 5px;">多食用原型食物，限制飽和脂肪、反式脂肪、紅肉、加工食品、高鈉食物。</span>
-            <p style="font-size: 24px; font-style: italic; margin-top: 5px;">
-                **✅ 推薦範例：** 大量蔬菜水果、全穀類、豆類、**橄欖油**、富含 Omega-3 的魚類 (如鮭魚、鯖魚)。
-            </p>
-        </li>
-        <li style="margin-bottom: 15px;">
-            <span style="font-weight: bold; color: #007bff;">🏃 3. 規律運動：</span>
-            <span style="display: block; margin-top: 5px;">參加**心臟復健**計畫是黃金標準。在醫師指導下，進行快走、騎自行車等中低強度有氧運動。</span>
-        </li>
-        <li style="margin-bottom: 15px;">
-            <span style="font-weight: bold; color: #ff9900;">⚖️ 4. 體重與三高管理：</span>
-            <span style="display: block; margin-top: 5px;">維持健康 BMI，並嚴格控制血壓、血糖、血脂，將這些指標視為長期戰略目標。</span>
-        </li>
-        <li style="margin-bottom: 15px;">
-            <span style="font-weight: bold; color: #800080;">🧘‍♀️ 5. 壓力管理：</span>
-            <span style="display: block; margin-top: 5px;">慢性壓力會升高血壓和皮質醇，增加心血管負擔。學習放鬆技巧 (冥想、深呼吸)。</span>
-        </li>
-    </ul>
-
-    <h2 style="font-size: 36px; color: #004d99; border-bottom: 5px double #004d99; padding-bottom: 10px; margin-top: 40px;">
-        四、🚨 立即就醫警訊
-    </h2>
-
-    <p style="font-size: 28px; font-weight: bold; color: #cc3333;">
-        若出現以下症狀，請立即撥打緊急電話並就醫：
-    </p>
-    <ul style="font-size: 26px; margin-left: 0; padding-left: 20px;">
-        <li><span style="font-weight: bold;">胸口疼痛或不適感：</span>症狀與支架植入前相似。</li>
-        <li><span style="font-weight: bold;">呼吸急促 (Shortness of Breath)。</span></li>
-        <li><span style="font-weight: bold;">手臂、背部、頸部或下巴疼痛。</span></li>
-        <li><span style="font-weight: bold;">異常出血或瘀青：</span>尤其在服用抗凝血藥物期間。</li>
-    </ul>
-
-    <div style="background-color: #004d99; color: white; padding: 20px; margin-top: 40px; text-align: center;">
-        <p style="font-size: 30px; font-weight: bold; margin: 0;">
-            支架是新的開始，預防是最好的藥物。請與您的醫療團隊緊密合作！
-        </p>
-    </div>
-
-</div>
-
-</div>
 
     
     <footer>
