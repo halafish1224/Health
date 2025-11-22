@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>【安心護腎，擁抱健康】長輩健康生活指南</title>
+    <style>
+        /* 整體風格：戶外、清新、穩定 */
+        :root {
+            --color-primary: #1E88E5; /* 鼓勵藍 */
+            --color-secondary: #4CAF50; /* 健康綠 */
+            --color-background: #F8F8F8; /* 淺灰底 */
+            --color-text: #333333;
+            --color-card-bg: #FFFFFF;
+            --color-accent: #FFC107; /* 警示/亮點黃 */
+        }
+
+        body {
+            font-family: 'Microsoft JhengHei', 'PingFang TC', sans-serif;
+            line-height: 1.6;
+            color: var(--color-text);
+            background-color: var(--color-background);
+            margin: 0;
+            padding: 20px;
+        }
+
+        header {
+            background: linear-gradient(135deg, var(--color-secondary), var(--color-primary));
+            color: white;
+            padding: 40px 20px;
+            text-align: center;
+            border-radius: 15px;
+            margin-bottom: 30px;
+            box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
+        }
+
+        header h1 {
+            font-size: 2.5em;
+            margin-bottom: 10px;
+        }
+
+        header p {
+            font-size: 1.2em;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: auto;
+        }
+
+        .section-title {
+            font-size: 2em;
+            color: var(--color-primary);
+            border-left: 5px solid var(--color-secondary);
+            padding-left: 15px;
+            margin-top: 40px;
+            margin-bottom: 25px;
+            font-weight: bold;
+        }
+
+        .card-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 25px;
+        }
+
+        .card {
+            background-color: var(--color-card-bg);
+            padding: 25px;
+            border-radius: 12px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.08);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            position: relative;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+        }
+
+        .card-icon {
+            font-size: 1.8em;
+            color: var(--color-secondary);
+            margin-bottom: 15px;
+        }
+
+        .card h3 {
+            color: var(--color-primary);
+            margin-top: 0;
+            border-bottom: 2px solid #EEE;
+            padding-bottom: 10px;
+        }
+
+        .alert-box {
+            background-color: #FFF3E0; /* 淺黃色 */
+            border-left: 5px solid var(--color-accent);
+            padding: 15px;
+            margin: 20px 0;
+            border-radius: 8px;
+            font-weight: bold;
+            color: #E65100;
+        }
+
+        ul {
+            list-style-type: none;
+            padding-left: 0;
+        }
+
+        ul li {
+            position: relative;
+            padding-left: 25px;
+            margin-bottom: 10px;
+        }
+
+        ul li::before {
+            content: '🌿'; /* 小葉子符號 */
+            position: absolute;
+            left: 0;
+            color: var(--color-secondary);
+        }
+
+        .interactive-tip {
+            cursor: pointer;
+            color: var(--color-primary);
+            text-decoration: underline;
+            font-weight: bold;
+            margin-top: 10px;
+            display: block;
+        }
+
+        .tip-content {
+            display: none;
+            background-color: #E3F2FD; /* 淺藍色 */
+            padding: 10px;
+            border-radius: 5px;
+            margin-top: 10px;
+            border-left: 3px solid var(--color-primary);
+        }
+
+        /* 腳註 */
+        footer {
+            text-align: center;
+            padding: 20px;
+            margin-top: 40px;
+            color: #666;
+            font-size: 0.9em;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>🌳 安心護腎，擁抱健康生活 🌳</h1>
+        <p>腎功能 G3a 期（eGFR 57.2）與心血管維護：樂觀面對，專業管理。</p>
+    </header>
+
+    <div class="container">
+
+        <div class="alert-box">
+            📢 <strong>【重要提醒】</strong> eGFR 下降至 57.2，表示進入 G3a 期。請務必攜帶所有血液與尿液報告，準時看腎臟科醫師，找出數值波動的原因。
+        </div>
+
+        <h2 class="section-title">一、 腎臟護理：減輕負擔，穩定功能</h2>
+        
+        <div class="card-grid">
+            
+            <div class="card">
+                <div class="card-icon">💧</div>
+                <h3>飲食原則：低鈉與適量蛋白</h3>
+                <ul>
+                    <li>**【控制鹽分】** 遠離高鈉加工食品、罐頭、醃製品。多利用天然辛香料調味。</li>
+                    <li>**【適量蛋白】** 依醫師指示，不過量攝取蛋白質，減輕腎臟代謝廢物壓力。</li>
+                    <li>**【優質水分】** 每日定時飲水，避免脫水導致 eGFR 急降（無嚴重水腫或限水醫囑者）。</li>
+                </ul>
+                <span class="interactive-tip" onclick="toggleTip(this)">💡 點我看：如何避免隱藏的鈉？</span>
+                <div class="tip-content">
+                    多數麵包、餅乾、運動飲料、湯塊都含有高鈉。烹飪時盡量使用新鮮食材。
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="card-icon">🚫</div>
+                <h3>用藥安全：避開傷腎地雷</h3>
+                <ul>
+                    <li>**【絕對禁用】** 非類固醇消炎止痛藥 (NSAIDs，如常見的止痛藥) 應完全避開。</li>
+                    <li>**【主動告知】** 看任何科別時，都必須主動告知醫師 eGFR 數值 (57.2)。</li>
+                    <li>**【謹慎中草藥】** 任何中藥、偏方、高劑量維他命，都需先經腎臟科醫師同意。</li>
+                </ul>
+            </div>
+
+            <div class="card">
+                <div class="card-icon">🩺</div>
+                <h3>定期追蹤與觀察</h3>
+                <ul>
+                    <li>**【準時回診】** 嚴格依照腎臟科醫師排定的時間追蹤 eGFR、肌酸酐、ACR。</li>
+                    <li>**【自我觀察】** 留意尿量是否減少、臉部/腳踝是否水腫、是否有持續高血壓。</li>
+                    <li>**【控制三高】** 腎臟健康的關鍵在於控制好血糖、血壓、血脂。</li>
+                </ul>
+            </div>
+        </div>
+        
+        <h2 class="section-title">二、 糖尿病與心血管支架：長效維護</h2>
+        
+        <div class="card-grid">
+
+            <div class="card">
+                <div class="card-icon">🍎</div>
+                <h3>糖尿病控管：保護腎臟首要任務</h3>
+                <ul>
+                    <li>**【血糖穩定】** 保持血糖在醫師建議範圍，延緩腎絲球硬化。</li>
+                    <li>**【藥物遵從】** 定時服用降血糖藥，不可自行停藥或調藥。</li>
+                    <li>**【均衡飲食】** 諮詢營養師，控制碳水化合物總量，選擇低 GI 食物。</li>
+                </ul>
+            </div>
+            
+            <div class="card">
+                <div class="card-icon">❤️</div>
+                <h3>血管支架：長期維護策略</h3>
+                <ul>
+                    <li>**【規律用藥】** 支架置入後，請**務必**遵照醫囑服用抗血小板藥物（如阿斯匹靈、保栓通）。</li>
+                    <li>**【避免血栓】** 抗血小板藥物是防止支架內血栓與再狹窄的關鍵，不可擅自停藥。</li>
+                    <li>**【血壓血脂】** 持續控制血壓與低密度膽固醇 (LDL)，是保護支架長期通暢的根本。</li>
+                </ul>
+                <span class="interactive-tip" onclick="toggleTip(this)">💡 點我看：支架後續追蹤重點？</span>
+                <div class="tip-content">
+                    心臟科會定期安排運動心電圖或心臟超音波檢查。若出現胸悶、呼吸急促，請立即就醫。
+                </div>
+            </div>
+
+        </div>
+
+        <h2 class="section-title">三、 樂活戶外：走出健康活力</h2>
+        
+        <div class="card-grid">
+
+            <div class="card" style="background-color:#E8F5E9;">
+                <div class="card-icon">🚶</div>
+                <h3>中等強度，規律活動</h3>
+                <p>腎功能下降或有支架不代表不能運動！選擇溫和、持續的運動，讓心肺功能更強健。</p>
+                <ul>
+                    <li>**建議活動**：快走、太極拳、慢速騎單車、游泳（水溫適中）。</li>
+                    <li>**頻率目標**：每週累積 150 分鐘的中等強度運動。</li>
+                    <li>**注意**：運動前後需補充適量水分，避免在極端天氣下外出。</li>
+                </ul>
+            </div>
+
+            <div class="card" style="background-color:#E1F5FE;">
+                <div class="card-icon">☀️</div>
+                <h3>正向心態，充足休息</h3>
+                <p>保持心情愉悅、減少壓力，對穩定血壓、血糖、保護腎臟有直接幫助。</p>
+                <ul>
+                    <li>**睡眠**：每晚確保 7-8 小時的優質睡眠。</li>
+                    <li>**放鬆**：學習腹式呼吸或冥想，幫助身體放鬆。</li>
+                    <li>**社交**：多與家人朋友戶外互動，保持社交連結。</li>
+                </ul>
+            </div>
+        </div>
+
+    </div>
+
+    <footer>
+        <p>&copy; 健康生活指南。本資訊僅供衛教參考，實際治療計畫請依據您的主治醫師醫囑。</p>
+    </footer>
+
+    <script>
+        function toggleTip(element) {
+            const content = element.nextElementSibling;
+            if (content.style.display === "block") {
+                content.style.display = "none";
+                element.textContent = '💡 點我看：' + element.textContent.split('：')[1];
+            } else {
+                content.style.display = "block";
+                element.textContent = '收起提示 ↑';
+            }
+        }
+    </script>
+
+</body>
+</html>
