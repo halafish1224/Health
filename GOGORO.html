@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>機車入門款價格指南：Gogoro與油車促銷比較</title>
+    <style>
+        :root {
+            --color-gogoro: #4CAF50; /* 綠色 */
+            --color-traditional: #FFC107; /* 黃色 */
+            --color-primary: #2196F3; /* 藍色 */
+            --color-background: #F4F4F9;
+            --color-text: #333;
+        }
+
+        body {
+            font-family: 'Microsoft JhengHei', 'PingFang TC', sans-serif;
+            line-height: 1.6;
+            color: var(--color-text);
+            background-color: var(--color-background);
+            margin: 0;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 1000px;
+            margin: auto;
+            background: white;
+            padding: 40px;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+        }
+
+        h1 {
+            color: var(--color-primary);
+            font-size: 2.5em;
+            text-align: center;
+            border-bottom: 4px double var(--color-primary);
+            padding-bottom: 10px;
+            margin-bottom: 30px;
+        }
+
+        h2 {
+            font-size: 1.8em;
+            color: var(--color-gogoro);
+            margin-top: 40px;
+            padding-left: 10px;
+            border-left: 6px solid var(--color-gogoro);
+        }
+
+        h3 {
+            font-size: 1.5em;
+            color: var(--color-traditional);
+            margin-top: 40px;
+            padding-left: 10px;
+            border-left: 6px solid var(--color-traditional);
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+        }
+
+        th, td {
+            padding: 12px 15px;
+            border: 1px solid #ddd;
+            text-align: left;
+        }
+
+        th {
+            background-color: #e0f7fa;
+            color: var(--color-primary);
+            font-weight: bold;
+        }
+        
+        /* 互動區塊樣式 */
+        .interactive-box {
+            background-color: #e8f5e9; /* 淺綠色 */
+            padding: 30px;
+            border-radius: 10px;
+            margin: 20px 0;
+            border: 2px solid var(--color-gogoro);
+        }
+
+        .price-display {
+            font-size: 2.2em;
+            font-weight: bold;
+            color: var(--color-gogoro);
+            text-align: center;
+            margin-top: 20px;
+            padding: 10px;
+            background-color: white;
+            border-radius: 8px;
+        }
+
+        select {
+            padding: 10px;
+            font-size: 1.1em;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+            width: 100%;
+            box-sizing: border-box;
+            margin-top: 10px;
+        }
+
+        .note {
+            font-size: 0.9em;
+            color: #666;
+            margin-top: 15px;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+
+    <h1>🛵 機車入門款價格指南：$30,000 元購車術</h1>
+
+    <div class="interactive-box">
+        <h2>✅ 互動式查詢：Gogoro EZZY/Ezzy 2 預估最低入手價</h2>
+        
+        <p style="font-size: 1.1em; font-weight: bold; color: var(--color-gogoro);">
+            原價約 $59,980 元。最低 $30,000 元以下的價格需**搭配最高的政府與地方補助**。
+        </p>
+        
+        <label for="city-select" style="font-size: 1.1em; display: block; margin-bottom: 5px;">請選擇您的居住縣市 (影響地方補助金)</label>
+        <select id="city-select" onchange="updatePrice()">
+            <option value="47180">請選擇...</option>
+            <option value="27180">桃園市/高雄市 (最高補助，可達 $30,000 以下)</option>
+            <option value="32180">台南市/新北市 (較高補助，約 $32,000 左右)</option>
+            <option value="37180">台北市/台中市 (中等補助，約 $37,000 左右)</option>
+            <option value="47180">其他縣市 (僅中央補助或無補助，約 $47,000 左右)</option>
+        </select>
+
+        <div class="price-display">
+            預估最低成交價：<span id="final-price" style="color: #CC0000;">請選擇縣市</span>
+        </div>
+        
+        <p class="note">
+            * 備註：此價格為**估算值**，已包含中央汰舊換新補助，但最終價格仍需以 Gogoro 門市報價為準。若無舊車可報廢，價格會大幅提高。
+        </p>
+    </div>
+
+    <hr style="margin: 40px 0;">
+
+    <h3>⛽ 傳統油車入門款價格區間 (125cc/115cc)</h3>
+    <p style="font-size: 1.1em;">傳統機車以耐用性及無里程焦慮為優勢，透過現金折扣，成交價通常在 $6 萬元上下。</p>
+
+    <table>
+        <thead>
+            <tr>
+                <th>廠牌</th>
+                <th>主力入門車型</th>
+                <th>建議售價區間</th>
+                <th>促銷與成交價特點</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>**SYM 三陽**</td>
+                <td>全新迪爵 125、活力 Vivo 125</td>
+                <td>$60,000 ~ $70,500</td>
+                <td>迪爵是國民神車，常有高額現金折扣，成交價具競爭力。</td>
+            </tr>
+            <tr>
+                <td>**KYMCO 光陽**</td>
+                <td>GP 125、Nice LED 115、新豪邁 125</td>
+                <td>$59,500 ~ $65,000</td>
+                <td>低價策略的主力，適合預算優先者。</td>
+            </tr>
+            <tr>
+                <td>**YAMAHA 山葉**</td>
+                <td>JOG 125、AXIS-Z 勁豪 125</td>
+                <td>$64,000 ~ $72,000</td>
+                <td>主打輕巧省油，促銷多為分期零利率或限時折價。</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <div class="note" style="text-align: center;">
+        請注意：所有價格與促銷活動皆為浮動，請以當期廠商公告為準。
+    </div>
+
+</div>
+
+<script>
+    /**
+     * JavaScript 函式：根據選擇的縣市更新預估價格
+     */
+    function updatePrice() {
+        const selectElement = document.getElementById('city-select');
+        const priceDisplayElement = document.getElementById('final-price');
+        
+        // 取得選擇的值 (即預估價格)
+        const selectedPrice = selectElement.value;
+
+        if (selectedPrice === "47180" && selectElement.selectedIndex === 0) {
+            priceDisplayElement.textContent = "請選擇縣市";
+            priceDisplayElement.style.color = '#CC0000';
+            return;
+        }
+
+        // 格式化價格並更新顯示
+        const formattedPrice = new Intl.NumberFormat('zh-TW', { 
+            style: 'currency', 
+            currency: 'TWD',
+            minimumFractionDigits: 0
+        }).format(selectedPrice);
+
+        priceDisplayElement.textContent = formattedPrice;
+        priceDisplayElement.style.color = (selectedPrice <= 30000) ? 'red' : 'green'; // 低於 $30,000 特別標紅
+    }
+</script>
+
+</body>
+</html>
